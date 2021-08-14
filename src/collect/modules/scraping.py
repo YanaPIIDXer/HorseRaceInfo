@@ -1,4 +1,5 @@
 import datetime
+from collect.models import RaceInfo
 
 
 # yyyy-MM-ddと言う形式の文字列をdatetime型に変換する
@@ -14,6 +15,11 @@ def exec(start_date_str, end_date_str):
     current_date = parse_date(start_date_str)
     end_date = parse_date(end_date_str)
     while current_date <= end_date:
+        contains = RaceInfo.objects.filter(date__exact=current_date)
+        if contains.exists():
+            # TODO:スクレイピング実装
+            pass
+
         current_date += datetime.timedelta(days=1)
 
     return True
