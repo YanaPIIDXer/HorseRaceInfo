@@ -42,6 +42,8 @@ def exec():
 
         url = "https://race.netkeiba.com/race/result.html?race_id=" + str(id)
         res = requests.get(url)
+        if res.status_code != 200:
+            continue
         res.encoding = res.apparent_encoding
 
         soup = BeautifulSoup(res.text, 'html.parser')
