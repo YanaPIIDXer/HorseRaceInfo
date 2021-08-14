@@ -74,6 +74,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'horse_race_app',
+        'HOST': 'db',
+        'USER': 'develop',
+        'PASSWORD': 'develop',
+    }
 }
 
 
