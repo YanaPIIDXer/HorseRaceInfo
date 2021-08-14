@@ -27,4 +27,6 @@ class CourseInfo(models.Model):
 
 # レース情報
 class RaceInfo(models.Model):
+    name = models.CharField(max_length=64, blank=False,
+                            null=False, default="race")
     horces = models.ManyToManyField(HorseInfo, related_name="horces")
