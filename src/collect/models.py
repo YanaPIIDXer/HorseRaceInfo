@@ -14,14 +14,14 @@ class CourseInfo(models.Model):
                             null=False, unique=True, choices=(
                                 ("Sapporo", "札幌",),
                                 ("Hakodate", "函館",),
-                                ("Sapporo", "福島",),
-                                ("Sapporo", "新潟",),
-                                ("Sapporo", "東京",),
-                                ("Sapporo", "中山",),
-                                ("Sapporo", "中京",),
-                                ("Sapporo", "京都",),
-                                ("Sapporo", "阪神",),
-                                ("Sapporo", "小倉",),
+                                ("Fukushima", "福島",),
+                                ("Nigata", "新潟",),
+                                ("Tokyo", "東京",),
+                                ("Nakayama", "中山",),
+                                ("Chukyo", "中京",),
+                                ("Kyoto", "京都",),
+                                ("Hanshin", "阪神",),
+                                ("Ogura", "小倉",),
                             ))
 
 
