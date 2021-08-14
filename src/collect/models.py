@@ -11,7 +11,18 @@ class HorseInfo(models.Model):
 # 開催場所情報
 class CourseInfo(models.Model):
     name = models.CharField(max_length=32, blank=False,
-                            null=False, unique=True)
+                            null=False, unique=True, choices=(
+                                ("Sapporo", "札幌",),
+                                ("Hakodate", "函館",),
+                                ("Sapporo", "福島",),
+                                ("Sapporo", "新潟",),
+                                ("Sapporo", "東京",),
+                                ("Sapporo", "中山",),
+                                ("Sapporo", "中京",),
+                                ("Sapporo", "京都",),
+                                ("Sapporo", "阪神",),
+                                ("Sapporo", "小倉",),
+                            ))
 
 
 # レース情報

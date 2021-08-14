@@ -1,0 +1,72 @@
+[
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 1,
+            "name": "Sapporo"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 2,
+            "name": "Hakodate"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 3,
+            "name": "Fukushima"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 4,
+            "name": "Nigata"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 5,
+            "name": "Tokyo"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 6,
+            "name": "Nakayama"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 7,
+            "name": "Chukyo"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 8,
+            "name": "Kyoto"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 9,
+            "name": "Hanshin"
+        }
+    },
+    {
+        "model": "collect.courseinfo",
+        "fields": {
+            "id": 10,
+            "name": "Ogura"
+        }
+    }
+]
