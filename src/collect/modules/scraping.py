@@ -42,6 +42,7 @@ def exec():
 
         url = "https://race.netkeiba.com/race/result.html?race_id=" + str(id)
         res = requests.get(url)
+        res.encoding = res.apparent_encoding
 
         soup = BeautifulSoup(res.text, 'html.parser')
         item = soup.find(class_="RaceList_Item02")
