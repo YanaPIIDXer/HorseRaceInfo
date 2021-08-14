@@ -10,15 +10,21 @@ def parse_date(date):
     return datetime.date(year, month, day)
 
 
+# スクレイピング
+def scrape(date):
+    # TODO:実装
+    pass
+
 # 実行
+
+
 def exec(start_date_str, end_date_str):
     current_date = parse_date(start_date_str)
     end_date = parse_date(end_date_str)
     while current_date <= end_date:
         contains = RaceInfo.objects.filter(date__exact=current_date)
         if contains.exists():
-            # TODO:スクレイピング実装
-            pass
+            scrape(current_date)
 
         current_date += datetime.timedelta(days=1)
 
