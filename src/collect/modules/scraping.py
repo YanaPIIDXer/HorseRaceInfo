@@ -14,10 +14,11 @@ def configure_race_id_list():
     start_year = datetime.date.today().year - year_range
     end_year = start_year + year_range
     for year in range(start_year, end_year + 1):
-        for course_id in range(1, 11):
-            for kai in range(1, 6):
-                for day in range(1, 9):
-                    for round in range(1, 13):
+        # ↓各ループの終端から色々減算してるのは、本来の数値だと時間がかかりすぎて作業に支障が出るため
+        for course_id in range(1, 11 - 9):
+            for kai in range(1, 6 - 4):
+                for day in range(1, 9 - 7):
+                    for round in range(1, 13 - 11):
                         id = str(year) + str(course_id).zfill(2) + \
                             str(kai).zfill(2) + str(day).zfill(2) + \
                             str(round).zfill(2)
