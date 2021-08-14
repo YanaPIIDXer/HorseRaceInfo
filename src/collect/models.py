@@ -27,7 +27,4 @@ class CourseInfo(models.Model):
 
 # レース情報
 class RaceInfo(models.Model):
-    date = models.DateField()
-    course = models.ForeignKey(CourseInfo, on_delete=models.CASCADE)
-    round = models.IntegerField(blank=False, null=False)
     horces = models.ManyToManyField(HorseInfo, related_name="horces")
