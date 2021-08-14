@@ -17,7 +17,7 @@ def configure_race_id_list():
                         id = str(current) + str(course_id).zfill(2) + \
                             str(kai).zfill(2) + str(day).zfill(2) + \
                             str(round).zfill(2)
-                        id_list.append(id)
+                        id_list.append(int(id))
 
     return id_list
 
