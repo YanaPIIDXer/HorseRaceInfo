@@ -8,7 +8,7 @@ const onSubmit = () => {
         'method': "POST",
         'data': $("form").serializeArray()
     }).done((data) => {
-        alert(data["result"]);
+        alert(data["message"]);
         $("#submit_button").prop("disabled", false);
     });
 }

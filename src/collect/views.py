@@ -7,4 +7,11 @@ def index(request):
 
 
 def collect(request):
-    return JsonResponse({"result": "OK"})
+    result = {"result": False, "message": "致命的なエラー"}
+    if request.POST["start_date"] > request.POST["end_date"]:
+        result["message"] = "開始日が終了日以降です"
+        return JsonResponse(result)
+
+    result["result"] = True
+    result["message"] = "OK"
+    return JsonResponse(result)
