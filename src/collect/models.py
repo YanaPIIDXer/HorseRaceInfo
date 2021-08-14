@@ -8,9 +8,15 @@ class HorseInfo(models.Model):
                             null=False, unique=True)
 
 
+# 開催場所情報
+class PlaceInfo(models.Model):
+    name = models.CharField(max_length=32, blank=False,
+                            null=False, unique=True)
+
+
 # レース情報
 class RaceInfo(models.Model):
     date = models.DateField()
-    place = models.CharField(max_length=16, blank=False, null=False)
+    place = models.ForeignKey(PlaceInfo, on_delete=models.CASCADE)
     round = models.IntegerField(blank=False, null=False)
     horces = models.ManyToManyField(HorseInfo, related_name="horces")
