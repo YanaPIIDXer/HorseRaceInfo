@@ -1,5 +1,7 @@
 from collect.models import RaceInfo, CourseInfo
 import datetime
+import requests
+import time
 
 
 # レースＩＤリストを構築する
@@ -25,4 +27,18 @@ def configure_race_id_list():
 # 実行
 def exec():
     id_list = configure_race_id_list()
+    for id in id_list:
+        try:
+            RaceInfo.objects.get(pk=id)
+        except:
+            pass
+        else:
+            # 既に情報収集済みのレースは飛ばす
+            continue
+
+        url = "https://race.netkeiba.com/race/result.html?race_id=" + str(id)
+        res = requests.get(url)
+
+        time.sleep(3.0)
+
     return True
