@@ -13,8 +13,6 @@
     <hr />
     <form method="POST" action="collect" onsubmit="onSubmit(); return false;">
         {% csrf_token %}
-        開始日：<input type="date" id="start_date" name="start_date" /><br />
-        終了日：<input type="date" id="end_date" name="end_date" /><br />
         <input type="submit" value="開始" id="submit_button" />
     </form>
     <br />
