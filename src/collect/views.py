@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 
@@ -7,4 +7,4 @@ def index(request):
 
 
 def collect(request):
-    return redirect("/")
+    return JsonResponse({"result": "OK"})

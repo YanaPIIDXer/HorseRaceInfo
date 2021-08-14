@@ -3,16 +3,19 @@
 <head>
     <title>競馬情報 - 情報収集</title>
     <meta charset="utf8" />
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/collect/index.js"></script>
 </head>
 
 <body>
     <h1>情報収集トップページ</h1>
     <hr />
-    <form method="POST" action="collect">
+    <form method="POST" action="collect" onsubmit="onSubmit(); return false;">
         {% csrf_token %}
         開始日：<input type="date" name="start_date" /><br />
         終了日：<input type="date" name="end_date" /><br />
-        <input type="submit" value="開始" />
+        <input type="submit" value="開始" id="submit_button" />
     </form>
     <br />
     <a href="/">戻る</a>
