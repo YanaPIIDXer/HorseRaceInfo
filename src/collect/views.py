@@ -13,5 +13,5 @@ def collect(request):
         return JsonResponse(result)
 
     result["result"] = True
-    result["message"] = "OK"
+    result["message"] = "情報収集が完了しました"
     return JsonResponse(result)
