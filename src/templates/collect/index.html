@@ -8,6 +8,13 @@
 <body>
     <h1>情報収集トップページ</h1>
     <hr />
+    <form method="POST" action="collect">
+        {% csrf_token %}
+        開始日：<input type="date" name="start_date" /><br />
+        終了日：<input type="date" name="end_date" /><br />
+        <input type="submit" value="開始" />
+    </form>
+    <br />
     <a href="/">戻る</a>
 </body>
 
