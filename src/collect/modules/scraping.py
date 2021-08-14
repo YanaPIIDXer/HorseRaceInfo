@@ -2,6 +2,7 @@ from collect.models import RaceInfo, CourseInfo
 import datetime
 import requests
 import time
+from bs4 import BeautifulSoup
 
 
 # レースＩＤリストを構築する
@@ -41,6 +42,13 @@ def exec():
 
         url = "https://race.netkeiba.com/race/result.html?race_id=" + str(id)
         res = requests.get(url)
+
+        soup = BeautifulSoup(res.text, 'html.parser')
+        item = soup.find(class_="RaceList_Item02")
+        item = item.find(class_="RaceName")
+        race_name = item.text.replace("\n", "").replace(" ", "")
+        race = RaceInfo(id=id, name=race_name)
+        race.save()
 
         time.sleep(3.0)
 
